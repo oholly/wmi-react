@@ -1,0 +1,133 @@
+$active-color: #628BF5;
+
+.wmi-list-header {
+  color: #000;
+
+  h2 {
+    display: inline-flex;
+    align-items: center;
+    margin: 0;
+    padding: 1em 0;
+    font-size: 1.5rem;
+    
+    span {
+      display: inline-block;
+      padding: 4px 8px;
+      margin-left: 2em;
+      font-size: .5em;
+      font-weight: normal;
+      background: #ccc;
+      border-radius: 16px;
+    }
+  }
+}
+
+.wmi-list-toolbar,
+.wmi-list-table {
+  background: #fff;
+  box-shadow: 0 0 8px rgba(#ccc, .4);
+  border-radius: 1em;
+}
+
+.wmi-list-toolbar {
+  display: flex;
+  font-size: 1rem;
+  padding: 1em;
+
+  input,
+  select {
+    font-size: .85rem;
+    padding: 8px 16px;
+    color: $active-color;
+    background: #f5f7fa;
+    border: 0;
+    border-radius: 8px;
+    outline: 0;
+
+    &:focus {
+      box-shadow: 0 0 4px $active-color;
+    }
+  }
+
+  select {
+    option {
+      color: #000;
+    }
+  }
+}
+
+.wmi-list-filters {
+  select {
+    margin-left: 1em;
+  }
+}
+
+.wmi-list-table {
+  padding: 1em;
+  margin: 1em 0;
+  overflow-x: auto;
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: inherit;
+    border-radius: .5em;
+    overflow: hidden;
+
+    th,
+    td {
+      text-align: left;
+    }
+
+    th {
+      font-size: 1rem;
+      font-weight: bold;
+      
+      button {
+        display: inline-flex;
+        align-items: center;
+        font-size: inherit;
+        font-weight: inherit;
+        padding: 0;
+        background: none;
+        border: none;
+        cursor: pointer;
+
+        .arrow {
+          margin-left: .5em;
+          opacity: 0;
+        }
+        
+        &.active,
+        &:hover {
+          color: $active-color; 
+          
+          .arrow {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    td {
+      font-size: .85rem;
+    }
+
+    thead {
+      background: rgba(#f5f7fa, .75);
+
+      th {
+        padding: 1em;
+      }
+    }
+
+    tbody {
+      tr {
+        border-bottom: 1px solid #ccc;
+      }
+      td {
+        padding: 1.5em 1em;
+      }
+    }
+  }
+}
